@@ -57,9 +57,9 @@
 			children = (
 				84728B2E2BE1769D0012D095 /* PokeD3XApp.swift */,
 				84728B302BE1769D0012D095 /* ContentView.swift */,
-				84728B322BE176A40012D095 /* Assets.xcassets */,
 				84728B372BE176A40012D095 /* Persistence.swift */,
 				84728B392BE176A40012D095 /* PokeD3X.xcdatamodeld */,
+				84728B322BE176A40012D095 /* Assets.xcassets */,
 				84728B342BE176A40012D095 /* Preview Content */,
 			);
 			path = PokeD3X;
