@@ -14,7 +14,7 @@ struct PokemonDetail: View {
     var body: some View {
         ScrollView {
             ZStack {
-                Image("normalgrasselectricpoisonfairy")
+                Image(pokemon.background)
                     .resizable()
                     .scaledToFit()
                     .shadow(color: .black, radius: 6)
@@ -37,10 +37,18 @@ struct PokemonDetail: View {
                         .padding([.leading, .trailing])
                         .background(Color(type.capitalized))
                         .clipShape(.rect(cornerRadius: 50))
+                        .shadow(color: .black, radius: 3)
                 }
                 Spacer()
             }
             .padding()
+            
+            Text("Stats")
+                .font(.title)
+                .padding(.bottom, -7)
+            
+            Stats()
+                .environmentObject(pokemon)
         }
         .navigationTitle(pokemon.name!.capitalized)
         .toolbar {
