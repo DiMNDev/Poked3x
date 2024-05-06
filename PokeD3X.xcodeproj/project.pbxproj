@@ -18,6 +18,7 @@
 		84728B3B2BE176A40012D095 /* PokeD3X.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84728B392BE176A40012D095 /* PokeD3X.xcdatamodeld */; };
 		84BBA7BF2BE92F190011CD63 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7BE2BE92F190011CD63 /* PokemonDetail.swift */; };
 		84BBA7C12BE931050011CD63 /* SamplePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7C02BE931050011CD63 /* SamplePokemon.swift */; };
+		84BBA7C32BE93D720011CD63 /* Pokemon+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7C22BE93D720011CD63 /* Pokemon+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		84728B3A2BE176A40012D095 /* PokeD3X.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokeD3X.xcdatamodel; sourceTree = "<group>"; };
 		84BBA7BE2BE92F190011CD63 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 		84BBA7C02BE931050011CD63 /* SamplePokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePokemon.swift; sourceTree = "<group>"; };
+		84BBA7C22BE93D720011CD63 /* Pokemon+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				842C0EC12BE2F35D009B11C8 /* FetchController.swift */,
 				842C0EC32BE2FCF7009B11C8 /* PokemonViewModel.swift */,
 				84728B372BE176A40012D095 /* Persistence.swift */,
+				84BBA7C22BE93D720011CD63 /* Pokemon+Ext.swift */,
 				84728B392BE176A40012D095 /* PokeD3X.xcdatamodeld */,
 				84728B322BE176A40012D095 /* Assets.xcassets */,
 				84728B342BE176A40012D095 /* Preview Content */,
@@ -161,6 +164,7 @@
 				84728B382BE176A40012D095 /* Persistence.swift in Sources */,
 				84728B312BE1769D0012D095 /* ContentView.swift in Sources */,
 				84BBA7BF2BE92F190011CD63 /* PokemonDetail.swift in Sources */,
+				84BBA7C32BE93D720011CD63 /* Pokemon+Ext.swift in Sources */,
 				842C0EC22BE2F35D009B11C8 /* FetchController.swift in Sources */,
 				84BBA7C12BE931050011CD63 /* SamplePokemon.swift in Sources */,
 				842C0EC42BE2FCF7009B11C8 /* PokemonViewModel.swift in Sources */,
