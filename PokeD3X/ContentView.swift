@@ -5,8 +5,8 @@
 //  Created by Joshua Arnold on 4/30/24.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -34,17 +34,8 @@ struct ContentView: View {
             }
             .navigationTitle("PokeDex")
             .navigationDestination(for: Pokemon.self, destination: { pokemon in
-                VStack {
-                    AsyncImage(url: pokemon.sprite) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    .frame(width: .infinity)
-                    Text(pokemon.name!.capitalized)
-                }
+                PokemonDetail()
+                    .environmentObject(pokemon)
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
