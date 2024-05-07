@@ -9,7 +9,9 @@ import CoreData
 import SwiftUI
 
 struct PokemonDetail: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var pokemon: Pokemon
+    @Environment(\.colorScheme) var colorScheme
     @State var showShiny = false
     var body: some View {
         ScrollView {
@@ -40,6 +42,27 @@ struct PokemonDetail: View {
                         .shadow(color: .black, radius: 3)
                 }
                 Spacer()
+
+                Button {
+                    withAnimation {
+                        pokemon.favorite.toggle()
+                        do {
+                            try viewContext.save()
+                        } catch {
+                            let nsError = error as NSError
+                            fatalError("Unresolved error \(nsError),  \(nsError.userInfo)")
+                        }
+                    }
+                } label: {
+                    if pokemon.favorite {
+                        Image(systemName: "star.fill")
+                            .shadow(color: colorScheme == .dark ? .white : .black, radius: 1)
+                    } else {
+                        Image(systemName: "star")
+                    }
+                }
+                .foregroundStyle(.yellow)
+                .font(.title)
             }
             .padding()
 
