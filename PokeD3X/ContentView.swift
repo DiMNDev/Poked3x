@@ -16,30 +16,42 @@ struct ContentView: View {
         animation: .default)
     private var pokedex: FetchedResults<Pokemon>
 
-    var body: some View {
-        NavigationStack {
-            List(pokedex) { pokemon in
+    @StateObject private var pokemonVM = PokemonViewModel(controller: FetchController())
 
-                NavigationLink(value: pokemon) {
-                    AsyncImage(url: pokemon.sprite) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                        ProgressView()
+    var body: some View {
+        switch pokemonVM.status {
+        case .notStarted:
+            Text("Not Started")
+        case .fetching:
+            Text("Fetching")
+            ProgressView()
+        case .failed:
+            Text("Failed")
+        case .success:
+            NavigationStack {
+                List(pokedex) { pokemon in
+
+                    NavigationLink(value: pokemon) {
+                        AsyncImage(url: pokemon.sprite) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 100, height: 100)
+                        Text(pokemon.name!.capitalized)
                     }
-                    .frame(width: 100, height: 100)
-                    Text(pokemon.name!.capitalized)
                 }
-            }
-            .navigationTitle("PokeDex")
-            .navigationDestination(for: Pokemon.self, destination: { pokemon in
-                PokemonDetail()
-                    .environmentObject(pokemon)
-            })
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                .navigationTitle("PokeDex")
+                .navigationDestination(for: Pokemon.self, destination: { pokemon in
+                    PokemonDetail()
+                        .environmentObject(pokemon)
+                })
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
                 }
             }
         }
