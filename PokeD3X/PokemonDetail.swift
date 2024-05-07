@@ -42,11 +42,11 @@ struct PokemonDetail: View {
                 Spacer()
             }
             .padding()
-            
+
             Text("Stats")
                 .font(.title)
                 .padding(.bottom, -7)
-            
+
             Stats()
                 .environmentObject(pokemon)
         }
@@ -57,10 +57,10 @@ struct PokemonDetail: View {
                     showShiny.toggle()
                 } label: {
                     if showShiny {
-                        Image(systemName: "want.and.stars")
+                        Image(systemName: "wand.and.stars")
                             .foregroundStyle(.yellow)
                     } else {
-                        Image(systemName: "want.and.stars.inverse")
+                        Image(systemName: "wand.and.stars.inverse")
                     }
                 }
             }
