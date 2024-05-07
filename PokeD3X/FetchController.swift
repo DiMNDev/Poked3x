@@ -12,7 +12,7 @@ struct FetchController {
         case badURL, badResponse, badData
     }
     
-    private let baseURL = URL(string: "https://spokeapi.co/api/v2/pokemon/")
+    private let baseURL = URL(string: "https://pokeapi.co/api/v2/pokemon/")
     
     func fetchAllPokemon() async throws -> [TempPokemon] {
         var allPokemon: [TempPokemon] = []
@@ -30,13 +30,13 @@ struct FetchController {
             throw NetworkError.badResponse
         }
         
-        guard let pokeDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any], let pokedex = pokeDictionary["results"] as? [[String: String]]  else {
+        guard let pokeDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any], let pokedex = pokeDictionary["results"] as? [[String: String]] else {
             throw NetworkError.badData
         }
         
         for pokemon in pokedex {
             if let url = pokemon["url"] {
-                allPokemon.append(try await fetchPokemon(from: URL(string: url)!))
+                try allPokemon.append(await fetchPokemon(from: URL(string: url)!))
             }
         }
         
