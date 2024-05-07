@@ -77,9 +77,9 @@ struct TempPokemon: Codable {
                 attack = try statsDictionaryContainer.decode(Int.self, forKey: .value)
             case "defense":
                 defense = try statsDictionaryContainer.decode(Int.self, forKey: .value)
-            case "specialAttack":
+            case "special-attack":
                 specialAttack = try statsDictionaryContainer.decode(Int.self, forKey: .value)
-            case "specialDefense":
+            case "special-defense":
                 specialDefense = try statsDictionaryContainer.decode(Int.self, forKey: .value)
             case "speed":
                 speed = try statsDictionaryContainer.decode(Int.self, forKey: .value)
