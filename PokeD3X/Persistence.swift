@@ -42,6 +42,8 @@ struct PersistenceController {
         container = NSPersistentContainer(name: "PokeD3X")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        } else {
+            container.persistentStoreDescriptions.first!.url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.dimndev.d3xgroup")!.appending(path: "PokeD3X.sqlite")
         }
         container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {

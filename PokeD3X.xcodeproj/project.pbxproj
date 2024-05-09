@@ -31,7 +31,7 @@
 		847CE6792BEAF76900486ECB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84728B372BE176A40012D095 /* Persistence.swift */; };
 		847CE67A2BEAF77000486ECB /* SamplePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7C02BE931050011CD63 /* SamplePokemon.swift */; };
 		847CE67B2BEAF77900486ECB /* FetchedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CE6562BEAF10400486ECB /* FetchedImage.swift */; };
-		847CE67C2BEAF78200486ECB /* WidgetPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CE6582BEAF1E800486ECB /* WidgetPokemon.swift */; };
+		847CE67F2BEB0AC600486ECB /* WidgetPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CE6582BEAF1E800486ECB /* WidgetPokemon.swift */; };
 		84BBA7BF2BE92F190011CD63 /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7BE2BE92F190011CD63 /* PokemonDetail.swift */; };
 		84BBA7C12BE931050011CD63 /* SamplePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7C02BE931050011CD63 /* SamplePokemon.swift */; };
 		84BBA7C32BE93D720011CD63 /* Pokemon+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBA7C22BE93D720011CD63 /* Pokemon+Ext.swift */; };
@@ -84,6 +84,8 @@
 		847CE66B2BEAF6E700486ECB /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		847CE66D2BEAF6E800486ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847CE66F2BEAF6E800486ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847CE67D2BEAFF3700486ECB /* PokeD3X.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeD3X.entitlements; sourceTree = "<group>"; };
+		847CE67E2BEAFF7700486ECB /* PokeD3XwidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeD3XwidgetExtension.entitlements; sourceTree = "<group>"; };
 		84BBA7BE2BE92F190011CD63 /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 		84BBA7C02BE931050011CD63 /* SamplePokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePokemon.swift; sourceTree = "<group>"; };
 		84BBA7C22BE93D720011CD63 /* Pokemon+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pokemon+Ext.swift"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		84728B2D2BE1769D0012D095 /* PokeD3X */ = {
 			isa = PBXGroup;
 			children = (
+				847CE67D2BEAFF3700486ECB /* PokeD3X.entitlements */,
 				84728B2E2BE1769D0012D095 /* PokeD3XApp.swift */,
 				84728B302BE1769D0012D095 /* ContentView.swift */,
 				84BBA7BE2BE92F190011CD63 /* PokemonDetail.swift */,
@@ -171,6 +174,7 @@
 		847CE6642BEAF6E700486ECB /* PokeD3Xwidget */ = {
 			isa = PBXGroup;
 			children = (
+				847CE67E2BEAFF7700486ECB /* PokeD3XwidgetExtension.entitlements */,
 				847CE6652BEAF6E700486ECB /* PokeD3XwidgetBundle.swift */,
 				847CE6672BEAF6E700486ECB /* PokeD3XwidgetLiveActivity.swift */,
 				847CE6692BEAF6E700486ECB /* PokeD3Xwidget.swift */,
@@ -303,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847CE67C2BEAF78200486ECB /* WidgetPokemon.swift in Sources */,
+				847CE67F2BEB0AC600486ECB /* WidgetPokemon.swift in Sources */,
 				847CE66A2BEAF6E700486ECB /* PokeD3Xwidget.swift in Sources */,
 				847CE66C2BEAF6E700486ECB /* AppIntent.swift in Sources */,
 				847CE6782BEAF75E00486ECB /* PokeD3X.xcdatamodeld in Sources */,
@@ -451,6 +455,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PokeD3X/PokeD3X.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokeD3X/Preview Content\"";
@@ -482,6 +487,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PokeD3X/PokeD3X.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokeD3X/Preview Content\"";
@@ -512,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PokeD3Xwidget/PokeD3XwidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RX7ZY78C5Y;
@@ -539,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PokeD3Xwidget/PokeD3XwidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RX7ZY78C5Y;
