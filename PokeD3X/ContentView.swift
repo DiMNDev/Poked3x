@@ -26,15 +26,14 @@ struct ContentView: View {
 
     @StateObject private var pokemonVM = PokemonViewModel(controller: FetchController())
 
-    let dummyStatus: PokemonViewModel.Status = .success
+    let dummyStatus: PokemonViewModel.Status = .fetching
 
     var body: some View {
         switch pokemonVM.status {
-//        switch dummyStatus {
         case .notStarted:
             Text("Not Started")
         case .fetching:
-            Text("Fetching")
+            Text("Gotta catch them all!")
             ProgressView()
         case .failed:
             Text("Failed")
